@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>securing file using password and GPG - The Knowledge Sharing Blog by nerkar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Purposesome time you want to share a file(s) to other but also want to make it sure that it should not be access by other then whom you want to send,so GPG is the answer.">
+<meta name="keywords" content="security,password,file">
+<meta property="og:type" content="article">
+<meta property="og:title" content="securing file using password and GPG">
+<meta property="og:url" content="http://nerkar.github.io/securing-file-using-password-and-GPG/2017/04/30/index.html">
+<meta property="og:site_name" content="The Knowledge Sharing Blog by nerkar">
+<meta property="og:description" content="Purposesome time you want to share a file(s) to other but also want to make it sure that it should not be access by other then whom you want to send,so GPG is the answer.">
+<meta property="og:updated_time" content="2017-05-01T16:43:47.737Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="securing file using password and GPG">
+<meta name="twitter:description" content="Purposesome time you want to share a file(s) to other but also want to make it sure that it should not be access by other then whom you want to send,so GPG is the answer.">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo logo-text" href="/">share what you know</a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://nerkar.github.io"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-securing-file-using-password-and-GPG" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      securing file using password and GPG
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/securing-file-using-password-and-GPG/2017/04/30/" class="article-date">
+  <time datetime="2017-04-30T17:55:09.000Z" itemprop="datePublished">2017-04-30</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/security/">security</a><span>></span><a class="article-category-link" href="/categories/security/open-source/">open source</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h2><p>some time you want to share a file(s) to other but also want to make it sure that it should not be access by other then whom you want to send,<br>so GPG is the answer.<br><a id="more"></a>     </p>
+<h2 id="What-is-GPG"><a href="#What-is-GPG" class="headerlink" title="What is GPG"></a>What is GPG</h2><p>according to Wikipedia:</p>
+<blockquote>
+<p>GNU Privacy Guard (GnuPG or GPG) is a free software replacement for Symantec’s PGP cryptographic software suite. GnuPG is compliant with RFC 4880, which is the IETF standards track specification of OpenPGP. Modern versions of PGP and Veridis’ Filecrypt are interoperable with GnuPG and other OpenPGP-compliant systems.  </p>
+</blockquote>
+<p>in simple words GPG is used to encrypt and decrypt content using well defined algorithms</p>
+<h2 id="How-to-password-protect-a-file"><a href="#How-to-password-protect-a-file" class="headerlink" title="How to password protect a file"></a>How to password protect a file</h2><ul>
+<li>open ‘git bash’ on windows or ‘terminal’ on ubuntu</li>
+<li>cd into directory where file is located</li>
+<li>type <code>gpg -c filename</code>  replace ‘filename’ with your actual name with extenssion.<br>it will ask for password</li>
+<li>type the password twice to confirm </li>
+</ul>
+<p>new file is being generated in the same directory with extenssion ‘.gpg’</p>
+<ul>
+<li>share the file.</li>
+</ul>
+<h2 id="How-to-open-a-password-protected-file"><a href="#How-to-open-a-password-protected-file" class="headerlink" title="How to open a password protected file"></a>How to open a password protected file</h2><ul>
+<li>open ‘git bash’ on Windows or terminal in ubuntu</li>
+<li>cd into directory where file is located</li>
+<li>type<br><code>gpg filename.gpg</code> (replace your filename with extenssion)</li>
+<li>it will ask you for the password</li>
+<li>type the password you set up in first phase or provided by file owner/sender.</li>
+</ul>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file/">file</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/password/">password</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/save-private-content-in-public-git-repository/2017/05/01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          save private content in public git repository
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hello-world/2017/04/30/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
+
+
+
+
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Praveen Nerkar&nbsp; 
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script> 
+  </div>
+</body>
+</html>

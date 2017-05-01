@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>The Knowledge Sharing Blog by nerkar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="–title: creating new GPG useriddate: 2017-05-01 14:17:12 tags:   Purposeyou want to store private content in public repositories like (secret KEYs) and other credentials which is necessary in reposito">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Knowledge Sharing Blog by nerkar">
+<meta property="og:url" content="http://nerkar.github.io/creating-new-GPG-userid/2017/05/01/index.html">
+<meta property="og:site_name" content="The Knowledge Sharing Blog by nerkar">
+<meta property="og:description" content="–title: creating new GPG useriddate: 2017-05-01 14:17:12 tags:   Purposeyou want to store private content in public repositories like (secret KEYs) and other credentials which is necessary in reposito">
+<meta property="og:image" content="https://en.wikipedia.org/wiki/File:Gnupg_logo.svg">
+<meta property="og:image" content="https://www.gnupg.org/share/logo-gnupg-light-purple-bg.png">
+<meta property="og:image" content="http://nerkar.github.io/creating-new-GPG-userid/2017/05/01/hexo.png">
+<meta property="og:updated_time" content="2017-05-01T11:53:56.991Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Knowledge Sharing Blog by nerkar">
+<meta name="twitter:description" content="–title: creating new GPG useriddate: 2017-05-01 14:17:12 tags:   Purposeyou want to store private content in public repositories like (secret KEYs) and other credentials which is necessary in reposito">
+<meta name="twitter:image" content="https://en.wikipedia.org/wiki/File:Gnupg_logo.svg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo logo-text" href="/">share what you know</a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://nerkar.github.io"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-creating-new-GPG-userid" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    <div class="article-meta">
+      <a href="/creating-new-GPG-userid/2017/05/01/" class="article-date">
+  <time datetime="2017-05-01T08:47:12.674Z" itemprop="datePublished">2017-05-01</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>–<br>title: creating new GPG userid<br>date: 2017-05-01 14:17:12</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2>
+
+
+<h2 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h2><p>you want to store private content in public repositories like (secret KEYs) and other credentials which is necessary in repository but not for all collaberator.<br>in order to achieve  the same you need to use ‘git-crypt’ which require a GPG UserID to be exist.<br><img src="https://en.wikipedia.org/wiki/File:Gnupg_logo.svg" alt="gpg logo"></p>
+<p><img src="https://www.gnupg.org/share/logo-gnupg-light-purple-bg.png" alt="gpg"><br><a id="more"></a><br><img src="/creating-new-GPG-userid/2017/05/01/hexo.png" alt="This is an example image" title="This is an example image"></p>
+<h2 id="How-to-generate-add-newuserID-and-generate-pair-of-secure-public-and-secret-key"><a href="#How-to-generate-add-newuserID-and-generate-pair-of-secure-public-and-secret-key" class="headerlink" title="How to generate add newuserID and generate pair of secure public and secret key"></a>How to generate add newuserID and generate pair of secure public and secret key</h2><ul>
+<li>open ‘git bash’ on windows or terminal in ubuntu</li>
+<li>type <code>gpg --gen-key</code><br>an interactive prompt will appear choose the options accordingly.<br> it will ask for type of KEY, go ahead and press ‘enter’.</li>
+<li>enter key size, default is 2048. press <code>enter</code> to choose default.<ul>
+<li>set the expire time, this option spesify how long key should be valid for, choose accordingly if you want to set other then option ‘never expires’<br>type <code>0</code> it will set the expiry duration to never. Key is not going to expire</li>
+</ul>
+</li>
+<li>it will ask for confirmation, type <code>y</code> and hit <code>enter</code></li>
+<li>set userID, an combination of alphabets which GPG can recognized uniquely (do not use spaces, it causes issues in few operations)   for instance I am taking username as ‘thetechblog’<ul>
+<li>enter email address</li>
+</ul>
+</li>
+<li>enter comment</li>
+<li>it will ask for confirmation, enter <code>o</code> to proceed alternative you can modify your entries by<br>entering <code>N</code> for changing name<br>enter <code>C</code> to change comment<br>enter <code>E</code> to change email</li>
+<li>enter password</li>
+<li>it will take time to generate random bytes. good options to generate random bytes during this process is<br>1 move your mouse<br>2 perform disk operation I/O<br>if you are using ubuntu in headless environment then try to install / upgrade packages or  copy / paste operation on the OS.<br>installing node modules worked for me.</li>
+</ul>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/save-private-content-in-public-git-repository/2017/05/01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">save private content in public git repository&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
+
+
+
+
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Praveen Nerkar&nbsp; 
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script> 
+  </div>
+</body>
+</html>
